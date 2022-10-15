@@ -1,0 +1,18 @@
+extends layout
+
+block content
+   div(class="productos") 
+    each val in array 
+
+      div(class="card" style="width: 18rem;")
+       img(src=`http://localhost:5000/api/v1/productos/imagen/${val.imagenes[val.imagenes.length-1].nombre}` id="img" class="card-img-top" alt="")
+       div(class="card-body")
+        h5(class="card-title")=val.nombre
+        p(class="card-text") Características: #{val.caracteristica}
+        p(class="card-text") Precio: #{val.precio}
+        button(type="button" class="btn btn-primary") Agregar a carrito
+
+   script(src="https://unpkg.com/axios/dist/axios.min.js")
+   script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
+   script(src="/javascripts/index.js")     
+

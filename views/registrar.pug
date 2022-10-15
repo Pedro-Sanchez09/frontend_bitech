@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  form( method="post" id="registrarProducto" enctype="multipart/form-data") 
+    div(class="form-group")
+      h1(class="titulo")=title 
+
+      label( for="id") Id: 
+      input(type="text" class="form-control" id="id" name="id" required)  
+      br
+
+      label(for="nombre") Nombre: 
+      input(type="text" class="form-control" id="nombre" name="nombre" required) 
+
+      label(for="precio") Precio: 
+      input(type="number" class="form-control" id="precio" name="precio" required) 
+
+      label(for="stock") Stock: 
+      input(type="number" class="form-control" id="stock" name="stock" required) 
+
+      label(for="caracteristica") Caracteristica: 
+      textarea(name="caracteristica" id="caracteristica" class="form-control" rows="3" cols="50" maxlength="300") 
+
+      label(for="imagen") Seleccionar imagen: 
+      input(type="file"  accept="image/png,image/jpeg" class="form-control" id="file" name="file" required)
+      
+
+      button(type="submit" class="btn btn-success" class="enviar"  ) Guardar producto
+  script(src="https://unpkg.com/axios/dist/axios.min.js")
+  script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
+  script( src="/javascripts/registrar.js")    

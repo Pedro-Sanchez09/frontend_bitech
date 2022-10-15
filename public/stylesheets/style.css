@@ -1,0 +1,40 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+a {
+  color: #3c00ff;
+  font-size: 30px;
+
+}
+nav {
+  background: rgb(193, 190, 190);
+
+}
+
+form {
+
+  background: #89e8e8;
+  height: 700px;
+  width: 500px;
+  margin: 30px;
+  padding: 20px;
+  margin-left: 30%;
+  border-radius: 15px;
+}
+
+.enviar{
+  margin-top: 20px;
+  margin-left: 35%;
+}
+.container{
+  margin-top: 20px;
+}
+.card{
+ float: left;
+ margin-top: 20px;
+ padding-inline-start: 20px;
+ 
+}
